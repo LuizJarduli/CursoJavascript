@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- cabeçalho HTML-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 6</title>
+    <!-- estilo - CSS-->
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            font: normal 20pt Arial
+        }
+        
+        h1 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Olá mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <!-- javascript -->
+    <script>
+        var nome = window.prompt(`Qual seu nome?`)
+        var salario = Number.parseFloat(window.prompt(`Qual seu salario?`))
+            //atributo length
+        document.write(`Olá <strong>${nome}</strong>, seu nome tem ${nome.length} letras.`)
+            //atributo toUpperCase
+        document.write(`<br>Seu nome em maiúsculas é ${nome.toUpperCase()}`)
+            //atributo toLowerCase
+        document.write(`<br>Seu nome em minúsculas é ${nome.toLowerCase()}`)
+            //atributo toLocaleString para formatar o valor em moeda local
+            //R$
+        document.write(`<br>Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+            //U$
+        document.write(`<br>Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`)
+            //EURO
+        document.write(`<br>Seu salário é ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            background: rgb(53, 207, 53);
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- alguns eventos do DOM para mouse: click, mouseover, mouseout -->
+    <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+    <script>
+        window.document.querySelector('#area').addEventListener('click', clicar)
+        window.document.querySelector('#area').addEventListener('mouseover', entrar)
+        window.document.querySelector('#area').addEventListener('mouseout', sair)
+
+        function clicar() {
+            let area = window.document.querySelector('#area')
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+
+        function entrar() {
+            let area = window.document.querySelector('#area')
+            area.innerText = 'Entrou!'
+        }
+
+        function sair() {
+            let area = window.document.querySelector('#area')
+            area.innerText = 'Sair!'
+            area.style.background = 'green'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Passaporte</title>
+</head>
+<style>
+    body {
+        font: normal 18pt Arial;
+    }
+    
+    input {
+        margin-bottom: 20px;
+    }
+</style>
+
+<body>
+    <h1>Alfândega</h1>
+    Informe seu país: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            let txtp = document.querySelector('input#txtpais')
+            let res = document.querySelector('div#res')
+            res.innerHTML = `<p>vivendo em ${txtp.value}</p>`
+            if (txtp.value == 'Brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+
+</body>
+
+</html>

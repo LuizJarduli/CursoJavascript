@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- cabeçalho HTML-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 9</title>
+    <!-- estilo - CSS-->
+    <style>
+        body {
+            background-color: rgb(89, 89, 230);
+            color: white;
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="div" class="classDiv" name="nameDiv">Clique em mim</div>
+    <!-- javascript -->
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1];
+        /*
+        innerText, texto dentro do parágrafo (tag p)
+        window.document.write(p1.innerText);
+        innerHTML, traz todo o html inclusive as formatações
+        */
+
+        /*window.document.write(p1.innerHTML)
+        var d = window.document.getElementById('div')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando'
+        */
+
+        var d = window.document.querySelector('div.classDiv')
+        d.style.color = 'blue'
+    </script>
+</body>
+
+</html>
